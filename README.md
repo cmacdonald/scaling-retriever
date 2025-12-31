@@ -31,6 +31,7 @@ from scaling_retriever.modeling.llm_encoder import LlamaBiDense
 
 model = LlamaBiDense.load_from_lora("hzeng/Lion-DS-1B-llama3-marco-mntp") 
 tokenizer = AutoTokenizer.from_pretrained( "hzeng/Lion-DS-1B-llama3-marco-mntp")
+tokenizer.padding_side = "left"
 ```
 
 ### Inference (Toy example)
